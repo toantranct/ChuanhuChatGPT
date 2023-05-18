@@ -289,7 +289,7 @@ class BaseLLMModel:
         if should_check_token_count:
             yield chatbot + [(inputs, "")], status_text
         if reply_language == "跟随问题语言（不稳定）":
-            reply_language = "the same language as the question, such as English, 中文, 日本語, Español, Français, or Deutsch."
+            reply_language = "the same language as the question, such as English, 中文, 日本語, Español, Français, Deutsch, or Vietnamese."
 
         limited_context, fake_inputs, display_append, inputs, chatbot = self.prepare_inputs(real_inputs=inputs, use_websearch=use_websearch, files=files, reply_language=reply_language, chatbot=chatbot)
         yield chatbot + [(fake_inputs, "")], status_text
