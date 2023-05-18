@@ -469,7 +469,7 @@ if __name__ == "__main__":
     demo.queue(concurrency_count=CONCURRENT_COUNT).launch(
         server_name=server_name,
         server_port=server_port,
-        share=share,
+        share=True,
         auth=auth_list if authflag else None,
         favicon_path="./assets/favicon.ico",
         inbrowser=not dockerflag, # 禁止在docker下开启inbrowser
